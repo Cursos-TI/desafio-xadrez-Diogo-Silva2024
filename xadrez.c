@@ -7,7 +7,12 @@
 int main() {
     // Nível Novato - Movimentação das Peças
     // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
-
+    
+    const int CASAS_TORRE = 5;
+    const int CASAS_BISPO = 5;
+    const int CASAS_RAINHA = 8;
+    int contador_movimentos; // Variável de controle para os loops
+    
     // Implementação de Movimentação do Bispo
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
 
