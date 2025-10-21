@@ -31,6 +31,15 @@ int main() {
     // Implementação de Movimentação da Torre
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
 
+    printf("\n--- Simulação da Torre (for) ---\n");
+    printf("Movimento: %d casas para a Direita\n", CASAS_TORRE);
+
+    // O loop 'for' é o mais adequado quando o número de repetições é fixo
+    for (contador_movimentos = 1; contador_movimentos <= CASAS_TORRE; contador_movimentos++) {
+        printf("Casa %d: Direita\n", contador_movimentos);
+    }
+    printf("Torre parou após %d movimentos.\n", CASAS_TORRE);
+
     // Implementação de Movimentação da Rainha
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
 
