@@ -4,6 +4,67 @@
 // Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
 // O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
 
+// --- Funções Recursivas para Movimentação (Nível Mestre) ---
+
+/**
+ * @brief Simula o movimento da Torre (Direita) usando recursividade.
+ * @param casas_restantes O número de casas que a Torre ainda precisa mover.
+ * @param casas_iniciais O número total de casas para calcular o passo atual.
+ */
+void moverTorreRecursivo(int casas_restantes, int casas_iniciais) {
+    if (casas_restantes <= 0) {
+        return; // Condição de parada.
+    }
+
+    // A Torre move-se em linha reta para a Direita.
+    printf("Casa %d: Direita\n", casas_iniciais - casas_restantes + 1);
+
+    // Chamada recursiva
+    moverTorreRecursivo(casas_restantes - 1, casas_iniciais);
+}
+
+/**
+ * @brief Simula o movimento da Rainha (Esquerda) usando recursividade.
+ * @param casas_restantes O número de casas que a Rainha ainda precisa mover.
+ * @param casas_iniciais O número total de casas para calcular o passo atual.
+ */
+void moverRainhaRecursivo(int casas_restantes, int casas_iniciais) {
+    if (casas_restantes <= 0) {
+        return; // Condição de parada.
+    }
+    
+    // A Rainha move-se para a Esquerda.
+    printf("Casa %d: Esquerda\n", casas_iniciais - casas_restantes + 1);
+
+    // Chamada recursiva
+    moverRainhaRecursivo(casas_restantes - 1, casas_iniciais);
+}
+
+/**
+ * @brief Simula o movimento do Bispo (Cima, Direita) usando recursividade e loops aninhados.
+ *
+ * @param casas_restantes O número total de movimentos diagonais restantes.
+ * @param casas_iniciais O número total de casas para calcular o passo atual.
+ */
+void moverBispoRecursivoComLoopsAninhados(int casas_restantes, int casas_iniciais) {
+    if (casas_restantes <= 0) {
+        return; // Condição de parada.
+    }
+
+    // Sugestão: Bispo com Loops Aninhados
+    // O loop mais externo (i) representa o passo vertical (Cima).
+    for (int i = 1; i <= 1; i++) {
+        // O loop mais interno (j) representa o passo horizontal (Direita).
+        for (int j = 1; j <= 1; j++) {
+            // Imprime o movimento diagonal como a combinação dos movimentos de um passo
+            printf("Casa %d: Cima, Direita\n", casas_iniciais - casas_restantes + 1);
+        }
+    }
+    
+    // Chamada recursiva para o próximo passo diagonal
+    moverBispoRecursivoComLoopsAninhados(casas_restantes - 1, casas_iniciais);
+}
+
 int main() {
     // Nível Novato - Movimentação das Peças
     // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
