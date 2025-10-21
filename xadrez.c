@@ -42,6 +42,22 @@ int main() {
 
     // Implementação de Movimentação da Rainha
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
+    printf("\n--- Simulação da Rainha (do-while) ---\n");
+    printf("Movimento: %d casas para a Esquerda\n", CASAS_RAINHA);
+
+    contador_movimentos = 1;
+    
+    // O 'do-while' garante que a Rainha se mova pelo menos uma vez, se CASAS_RAINHA for 0,
+    // mas aqui verificamos o número para um movimento válido.
+    if (CASAS_RAINHA > 0) { 
+        do {
+            printf("Casa %d: Esquerda\n", contador_movimentos);
+            contador_movimentos++;
+        } while (contador_movimentos <= CASAS_RAINHA);
+    } else {
+        printf("A Rainha não se moveu (CASAS_RAINHA é 0).\n");
+    }
+    printf("Rainha parou após %d movimentos.\n", CASAS_RAINHA);
 
     // Nível Aventureiro - Movimentação do Cavalo
     // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
