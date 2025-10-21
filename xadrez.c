@@ -16,6 +16,18 @@ int main() {
     // Implementação de Movimentação do Bispo
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
 
+    printf("--- Simulação do Bispo (while) ---\n");
+    printf("Movimento: %d casas na diagonal (Cima, Direita)\n", CASAS_BISPO);
+    
+    contador_movimentos = 1;
+
+    // O loop 'while' executa enquanto o Bispo tiver casas para percorrer
+    while (contador_movimentos <= CASAS_BISPO) {
+        printf("Casa %d: Cima, Direita\n", contador_movimentos);
+        contador_movimentos++;
+    }
+    printf("Bispo parou após %d movimentos.\n", CASAS_BISPO);
+
     // Implementação de Movimentação da Torre
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
 
